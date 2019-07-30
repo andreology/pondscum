@@ -1,0 +1,37 @@
+A system of ponds at a casino in Las Vegas is laid out in a checkerboard pattern.
+At one point, the heights of all the ponds in the system were kept at carefully
+calibrated heights. They used to be constantly filled or drained as fast as needed
+to keep them at their constant, pre-set heights. The water flowing through the
+pipes was an amusing spectacle for children to see.
+Due to the crumbling economy in Vegas, the pumps in certain of the ponds
+no longer function correctly, and the heights of these ponds are no longer directly
+controlled by the computer system.
+Pipes connect each pond to its four neighbors (east, west, north, south). If a
+pond has a broken pump, then water flows through the pipe between two ponds
+at a rate that is proportional to the difference in the heights of the water in
+those ponds. If a pond’s pump is still controlled by the system, then you may
+assume that it’s height remains constant.
+One day, someone fills up the ponds to a certain initial height and then just
+lets the system take care of itself. Your problem is to compute an estimate of
+the heights in all variable-height ponds at equilibrium (that is, when the total
+rate at which water flows into each variable-height, broken-pump ponds from its
+higher neighbors is equal to the rate flowing out to its lower neighbors, so that
+the pond’s height remains constant). The equilibrium height does not depend
+on the constant of proportionality that relates differences in heights to rate of
+flow.
+2
+In the diagram, the interior comprises the ponds inside the square. The
+numbers inside the ponds indicate the waters equilibrium height above ground
+level to the nearest centimeter. The dashed lines are pipes. The unconnected
+pipes leading from the ponds along the exterior are connected to sources (or
+sinks) that maintain the external ponds at the heights shown.
+The input to your program (in a file named ponds.txt) will be the initial
+heights of the ponds in grid format, separated by comma. Variable-height ponds
+will be indicated by an exclamation point in front of the number. For example,
+the input for the square shown above would be as follows.
+0,300,200,200,300,0
+100,!174,!167,!161,!153,50
+100,!130,!133,!123,!100,50
+100,!112,!114,!97,!74,50
+100,!106,!112,!77,!50,50
+0,100,150,50,0,0
